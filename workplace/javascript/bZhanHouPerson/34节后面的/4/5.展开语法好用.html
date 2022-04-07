@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let arr = ["dasfa","dafsaf"];
+    let arr1 = ['sada',"dasfa"];
+
+    // 用原来的方式合并数组
+   /*  for(const value of arr1){
+        arr.push(value);
+    }
+    console.log(arr); ///(4) ['dasfa', 'dafsaf', 'sada', 'dasfa']
+ */
+
+    // 用现在的方式
+
+    arr = [...arr,...arr1];
+    console.log(arr); ///(4) ['dasfa', 'dafsaf', 'sada', 'dasfa']
+
+
+    function sum(...args){
+        console.log(args);
+
+        return args.reduce((s,v)=>{
+            return (s+=v); //这个后面再介绍
+        })
+    }
+
+    sum(1,2,3,4);///(4) [1, 2, 3, 4]
+
+    
+
+    
+</script>
+</html>

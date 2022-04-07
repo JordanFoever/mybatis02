@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>jaskfldajf</button>
+    
+</body>
+<script>
+    let Lesson = {
+        site:"你好啊",
+        lists:["js","css","mysql"],
+        show:function(){
+            // console.log(this);
+
+            /* return this.list.map(function(value){
+                console.log(this);
+            }) */
+
+            // 箭头函数的this是父级作用的this
+            return this.lists.map((value)=>{
+                console.log(this);  ///Run results=>this是当前函数的实例
+
+                return `${self.site}-${value}`;
+
+            })
+            
+        }
+    }
+
+    console.log(Lesson.show()); 
+console.log("----------------");
+
+    let Dom={
+      site:"weijiangquan",
+      bind :function(){
+        const button = document.querySelector('button'); 
+        console.log(button);
+
+        /* button.addEventListener('click',function(){
+            console.log(this); ///Run results=>button
+        }) */
+
+        button.addEventListener('click',event=>{
+            console.log(this.site+event.target.innerHTML);
+        })
+      }
+    }
+
+    
+    Dom.bind();
+
+</script>
+</html>

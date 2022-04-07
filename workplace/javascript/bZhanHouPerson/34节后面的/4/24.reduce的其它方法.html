@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let cart = [
+        {title:"hadjshdfak",price:120000},
+        {title:"hadjshdfak",price:25000},
+        {title:"hadjshdfasdak",price:3600},
+    ];
+
+    function maxPrice(goods){
+        return cart.reduce(function(pre,cur){
+            return pre.price>cur.price?pre:cur
+        })
+    }
+
+   console.log(maxPrice(cart)); ///Run results=>{title: 'hadjshdfak', price: 120000}   得到最大的一项
+
+
+    // 用reduce进行求和
+    function sum(goods){
+        return goods.reduce(function(total,cur){
+            return total+=cur["price"]
+        },0);
+    }
+    console.log(sum(cart));///Run results=>148600
+    
+
+    
+</script>
+</html>

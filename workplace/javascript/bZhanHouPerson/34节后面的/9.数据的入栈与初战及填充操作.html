@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let array = ['das','asd'];
+    let aa = array.pop();
+    console.log(array);///Run results=>['das']
+
+    array.unshift("dasda");
+    console.log(array);///Run results=>['dasda', 'das']
+
+    array.shift("dasdadad");
+    console.log(array); ///Run results=>['das']
+
+    // 定义元素
+    // console.log(Array(5)); ///Run results=> [empty × 5]
+
+    console.log(Array(5).fill("dasda")); ///Run results=> ['dasda', 'dasda', 'dasda', 'dasda', 'dasda']
+    
+</script>
+</html>

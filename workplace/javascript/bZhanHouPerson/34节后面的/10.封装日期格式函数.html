@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const date = new Date("1933-2-12 10:22:22");
+    console.log(date);
+
+    console.log(date.getFullYear());
+    console.log(date.getMonth()+1); //月份是从0开始的
+    console.log(date.getDate());
+    console.log(date.getHours());
+    console.log(date.getMinutes());
+    console.log(date.getSeconds());    
+
+    const formatDate = `${date.getFullYear()}年${date.getMonth()+1}月${date.getDate()}日`
+
+    console.log(formatDate);
+
+</script>
+</html>

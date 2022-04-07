@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let cart = [
+        { title: "hadjshdfak", price: 120000 },
+        { title: "hadjshdfak", price: 25000 },
+        { title: "hadjshdfasdak", price: 3600 },
+    ];
+
+
+    // 获取商品价格超过一万元商品的名称
+
+    function getNameByPrice(goods,price){
+        return goods.reduce(function(arr,cur){
+            if(cur.price>price){
+                arr.push(cur)
+            }
+            return arr;
+        },[]).map(function(item){return item.title})
+    }
+    
+    console.log(getNameByPrice(cart,10000));///Run results=>) ['hadjshdfak', 'hadjshdfak']
+
+    w
+</script>
+
+</html>

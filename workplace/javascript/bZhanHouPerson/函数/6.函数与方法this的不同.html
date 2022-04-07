@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // let edu = {
+    //     name:"你好啊",
+    //     show:function(){
+    //         return this.name;
+    //     }
+    // }
+
+    // console.log(edu.show()); ///Run results=>你好啊
+
+
+    let edu = {
+        name:"你好啊",
+        show:function(){  //方法
+            console.log(this); ///Run results=>{name: '你好啊', show: ƒ}
+            function render(){ //函数
+                console.log(this); ///Run results=>Window {window: Window, self: Window, document: document...   //这里面的this是window 
+                
+            }
+            render();
+            return this.name;  //this就是函数当前对象的实例
+        }
+    }
+
+    
+    edu.show();
+
+
+
+    
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+        let lessons = [
+        {title:'asdfasf',category:'css'},
+        {title:'你好啊',category:'css'},
+        {title:'有点好玩',category:'mysql'},
+    ]
+
+    /* lessons.forEach(function(item,index,lessons){
+        console.log(item);  ///Run results=>Object 得到每一项
+        console.log(index); ///Run results=>得到索引
+        console.log(lessons); ///Run results=>打印原始的东西
+    }) */
+
+    //[strange]
+    lessons.forEach(function(item){
+        console.log(item); ///Run results=>只有一个参数的时候遍历出每一项
+    })  
+    
+</script>
+</html>

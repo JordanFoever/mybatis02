@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //[strange]
+    // reduce函数的语法介绍
+
+    // 第一次执行的时候,pre是数组第一个 value是数组第二个数
+    //第二次执行的,pre是函数的返回值,value是第三个参数
+    //后面pre是函数的返回值 value往后面推
+    // 没有返回值的话就是undefined
+    let arr = [1,2,3,4,5];
+    arr.reduce(function(pre,value,index,array){
+        console.log(pre,value);
+    })
+
+
+    // 当有两个参数的时候  如果有两个参数的话 第二个参数给pre value就是数组的第一个元素
+    let arr1 = [1,2,3,4,5];
+    arr1.reduce(function(pre,value,index,array){
+        console.log(pre,value);
+    },1)
+
+
+    // 这个函数的应用(reduce)
+
+     let arr3 = [1,2,3,1,1];
+     function arrayCount(array,item){
+         return array.reduce(function(total,cur){
+             console.log("cur(第二参数)的值"+cur);
+             total+=item===cur?1:0;
+             return total;
+         },0)
+     }
+     console.log(arrayCount(arr3,1));
+
+
+
+    //  用reduce得到最大值也很方便
+    let arr4 = [1,2,344,99];
+    function arrayMax(array){
+        return array.reduce(function(pre,cur){
+            return pre>cur?pre:cur;
+        })
+    }
+    console.log(arrayMax(arr4)); //求最大值的方法
+
+</script>
+</html>
+

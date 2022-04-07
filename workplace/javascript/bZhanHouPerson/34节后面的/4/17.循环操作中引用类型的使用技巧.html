@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //[strange]
+
+    let lessons = [
+        {title:'asdfasf',category:'css'},
+        {title:'你好啊',category:'css'},
+        {title:'有点好玩',category:'mysql'},
+    ]
+
+    /* for(let i = 0;i<lessons.length;i++){
+        lessons[i].title = `鲸落小小${lessons[i].title}`;
+    } */
+    console.log(lessons);///Run results=>会改变元素组
+
+    for(const value of lessons){
+        value.title = `鲸落小小${value.title}`;
+    }
+
+    console.log(lessons);///Run results=>结果和上面相同
+
+   let aa = [1,2,34];
+   for(let value of lessons){
+       value++;
+   }
+
+   console.log(aa); ///Run results=>如果是值类型的化不会改变原来的数组,当时是引用类型的化就会改变原来的数组
+
+   for(const key in lessons){
+       lessons[key].title = `鲸落小小${lessons[key].title}`;
+   }
+   console.log(lessons);
+  //for in的化就是得到的就是索引 for of就是每一项
+
+  
+
+
+   
+
+
+
+
+    
+</script>
+</html>

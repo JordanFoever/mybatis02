@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+</body>
+<script>
+    let array = ["a","b"];
+    array[2] = "c";
+    console.log(array);
+
+    let hd = ['shop','cms'];
+    array.push(...hd)
+    console.log(array); ///Run results=>['a', 'b', 'c', 'shop', 'cms']
+
+
+    function rangeArray(begin,end){
+        const array = [];
+        for(let i =begin;i<=end;i++){
+            array.push(i);
+        }
+        return array;
+    }
+
+    console.log(rangeArray(2,7));///Run results=> [2, 3, 4, 5, 6, 7]
+
+    
+</script>
+</html>

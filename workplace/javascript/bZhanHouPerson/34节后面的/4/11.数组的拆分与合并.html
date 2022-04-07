@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let str = 'afdasfasf,fweftw';
+    let hh =  str.split(","); //拆分
+    console.log(hh);
+
+    let aa =  hh.join('-'); ///Run results=> ['afdasfasf', 'fweftw']s //合并
+    console.log(aa); ///Run results=>afdasfasf-fweftw
+
+    
+    
+
+    // 数组连接
+
+    let a = ["dasd","Adas","ddd"];
+    let b = [1,2,3,4];
+    let c = [22,33];
+    a = a.concat(b);
+    console.log(a); ///Run results=>['dasd', 'Adas', 'ddd', 1, 2, 3, 4]
+    a = a.concat(b,c);
+    console.log(a); ///Run results=> ['dasd', 'Adas', 'ddd', 1, 2, 3, 4, 1, 2, 3, 4, 22, 33]
+
+    
+    // 使用点语法
+    let  gg = [1,2];
+    let bb = [3,4,5];
+    let jj = [22,33];
+    gg = [...gg,...bb,...jj];
+    console.log(gg);///Run results=> [1, 2, 3, 4, 5, 22, 33]
+
+
+    
+</script>
+</html>

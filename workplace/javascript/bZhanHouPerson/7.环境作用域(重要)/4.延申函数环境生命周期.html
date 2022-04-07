@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    /*   function hd(){
+         let n = 1;
+          function sum(){
+             console.log(++n);
+         }
+     }
+ 
+     hd();
+     hd();  //重复创建 */
+    /*   function hd(){
+          let n = 1;
+           return function sum(){
+              console.log(++n);
+          }
+      }
+  
+      let a = hd();//hd()这个函数此时是一个大家庭是一个整体  //这块数据在被使用就不会被清除掉
+      a(); ///Run results=>2
+      a(); ///Run results=>3 //在上一个的基础上相加
+  
+      let b =hd();  //这个时候又创建了一个新的
+      b(); ///Run results=>2
+   */
+
+
+    //  看一个比较复杂的情况
+    /*    function hd(){
+           let n = 1;
+            return function sum(){
+               let m = 1;
+               function show(){
+                   console.log(++m);
+               }
+               show();
+           };
+       }
+   
+       let a = hd();
+       // 没有发生改变值
+       a(); ///Run results=>2
+       a(); ///Run results=>2
+    */
+
+
+    // 下面的这个有一点懵
+    function hd() {
+        let n = 1;
+        return function sum() {
+            let m = 1;
+            return function show() {
+                console.log(++m);
+            }
+        };
+    }
+
+
+    let a = hd()();
+    a(); ///Run results=>2
+    a(); ///Run results=>3
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

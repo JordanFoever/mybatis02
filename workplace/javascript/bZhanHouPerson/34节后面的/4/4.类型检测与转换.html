@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>dhajkhdf</div>
+    <div>alfjlkajf</div>
+    
+</body>
+<script>
+    console.log(Array.isArray([])); ///true //检测是否为数组
+
+    let hd = String([1,2,3,4]); //数组转换为字符串
+    console.log(typeof hd); ///String
+    console.log(hd); ///1,2,3,4
+
+
+    // 连接
+    let hh = [111,22,33].join("-");
+    console.log(hh);  //111-222-333
+    console.log(typeof hh); ///String
+
+
+    // 其它类型转换成数组
+    let ccc = "adasfa";
+    console.log(ccc.split("")); ///(6) ['a', 'd', 'a', 's', 'f', 'a']
+
+
+    let divs = document.querySelectorAll("div");
+    console.log(divs); ///NodeList(2) [div, div]
+    // console.log(Array.from(divs)); ///(2) [div, div]变成数组
+
+    console.log(
+        Array.from(divs,function(item){
+            item.style.backgroundColor = "red";
+            // return item;
+        })
+    );
+
+    // from可以转换为数组,同时可以对于数组中的元素进行二次的处理
+
+
+   
+</script>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <input type="text" name="title">
+    <span></span>
+</body>
+<script>
+    let arr =  ['asada','asdaf'];
+    arr.every(function(value,index,arr){
+        console.log(value); ///Run results=>asada asdaf
+        console.log(index); ///Run results=>0 1
+        // return true;  //返回为真的时候输出每一个
+        return false; ///Run results=>只输出一个
+    })
+
+    // 这个方法用来检测下面的这种情况比较好
+
+    let user = [
+        {name:"例子",js:33},
+        {name:"小王",js:88},
+        {name:"小朱",js:77},
+    ]
+    const res = user.every(function(item){
+        return item.js >=60; //只要有小于60的就会返回false
+    })
+
+    console.log(res?"全部及格":"有同学没有及格");
+
+
+    let arr1 =  ['absdkjaf','asdaf'];
+
+    // some只要有一个为真就为真
+    let res1 = arr1.some(function(value,index,arr){
+        console.log(value);
+        // return true; ///Run results=>返回为真的时候就只会返回第一个,后面就不会再判断了
+        return false ///Run results=>absdkjaf asdaf
+    })
+
+   console.log(res1);
+//    可以用这个方法来检测是否含有关键词
+   let keywords = ["wei",'jiang'];
+   let title = document.querySelector("input");
+   title.addEventListener('keyup',function(){
+       const res3 =  keywords.some(keyword =>{
+             return this.value.indexOf(keyword) !== -1;
+       });
+     /*   if(res3===false){
+           document.querySelector('span').innerHTML = `必须包含${keywords.join(',')}关键词`;
+       }else{
+           document.querySelector('span').innerHTML = '';
+       } */
+
+    //    可以简写为
+    document.querySelector('span').innerHTML = res3?"":`必须包含${keywords.join(',')}关键词`;
+
+})
+   
+
+   
+
+
+</script>
+</html>

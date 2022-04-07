@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let arr = [1,2,3,4,5,6];
+    // console.log(arr.slice(1,2));///Run results=>[2]
+
+    // console.log(arr);///Run results=>[1, 2, 3, 4, 5, 6]原数组没有改变
+
+    console.log(arr.slice(1)); //[strange] //从1一直到最后 
+
+    let arr1 = [1,2,3,4,5,6,7];
+    let hhh = arr1.splice(1,3);//[strange]  //会改变原数组
+    console.log(hhh);///Run results=> [2, 3, 4]
+    console.log(arr1);///Run results=>) [1, 5, 6, 7]
+
+    // 还可以进行替换的作用
+    let wei = [1,2,3,4,5];
+     let wei1 =  wei.splice(1,1,33);
+     console.log(wei1);///Run results=>[2]
+     console.log(wei);///Run results=>[1, 33, 3, 4, 5]
+
+
+    //  可以实现增加的功能
+    wei.splice(3,0,'sada','asdada','adsadfd');
+
+    console.log(wei);///Run results=>[1, 33, 3, 'sada', 'asdada', 'adsadfd', 4, 5]
+    
+    
+</script>
+</html>

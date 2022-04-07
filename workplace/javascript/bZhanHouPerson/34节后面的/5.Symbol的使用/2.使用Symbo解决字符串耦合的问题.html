@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let grade = {
+        李四:{js:100,css:89},
+        李四:{js:35,css:55}
+    }
+
+    console.log(grade); ///Run results=>李四: {js: 35, css: 55}
+
+    let user1={
+        name:"李四",
+        key:Symbol()
+    };
+    let user2={
+        name:'李四',
+        key:Symbol()
+    }
+
+    let aa = {
+        [user1.key]:{js:100,css:89},
+        [user2.key]:{js:200,css:234}
+    }
+    console.log(aa[user1.key]); ///Run results=>css: 89  js: 100
+</script>
+</html>
