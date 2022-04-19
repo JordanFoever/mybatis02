@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.softeem.mybatis.mapper.UserMapper">
+
+    <insert id="insert">
+        insert into tbuser(username, password, phone, status) VALUES
+        (#{username},#{password},#{phone},#{status})
+    </insert>
+
+    <delete id="deleteById">
+        delete from tbuser where id=#{id}
+    </delete>
+
+    <update id="update">
+        update tbuser set password=#{password} where id=#{id}
+    </update>
+
+    <select id="selectAll" resultType="com.softeem.mybatis.entity.User">
+        select * from tbuser
+    </select>
+
+    <select id="selectById" resultType="com.softeem.mybatis.entity.User">
+        select * from tbuser where id=#{id}
+    </select>
+
+</mapper>
